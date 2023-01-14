@@ -70,7 +70,7 @@ df_unilp_ttl = pd.read_json(UniLP)
 OrcaLPSplit = 'https://node-api.flipsidecrypto.com/api/v2/queries/d8efa2d6-ba9c-4610-ae0b-bf2bcbe80b7c/data/latest'
 df_orcalp_splitpool = pd.read_json(OrcaLPSplit)
 df_orcalp_bonk = df_orcalp_splitpool.loc[:'2023-01-01 00:00:00.000']
-df_orcalp_bonk['POOL BONK?'] = df_orcalp_bonk['POOL_ADDRESS_NAME'].str.contains("BONK", regex=False)
+df_orcalp_bonk['POOL BONK?'] = df_orcalp_bonk['POOL_ADDRESS_NAME'].str.contains("BONK")
 
 OrcaLPTtl = 'https://node-api.flipsidecrypto.com/api/v2/queries/2ec0ad61-7b05-4a13-82a0-423d39dc0e6f/data/latest'
 df_orcalp_ttl = pd.read_json(OrcaLPTtl)

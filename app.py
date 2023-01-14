@@ -26,17 +26,10 @@ st.markdown(
     """
         # Overview 
         
-        This dashboard offers a holistic view of the Optimism ecosystem including 
-        transactions, user activities, staking, and developments. Introduced in 
-        June 2019, Optimism is a Layer 2 Optimistic Rollup network designed to utilize 
-        the strong security guarantees of Ethereum while reducing 
-        its cost and latency.
-        https://medium.com/orca-so/introducing-whirlpools-concentrated-liquidity-on-orca-3987c131a44d
-        - concentrated liquidity 
-        
-        1. Key finding 1
-        2. Key finding 2
-        3. Key finding 3
+        This dashboard analyses the growth of Orca Whirlpools on Solana. 
+        Launched in March 2022, Orca whirlpools utilizes concentrated liquidity, allowing LPs to concentrate their liquidity 
+        in specific price ranges. Such innovation not only encourages a more efficient use of capital, 
+        but also reduces slippage costs for traders.
         
 """)
 st.markdown(
@@ -50,8 +43,10 @@ st.markdown(
     """
     ---
     # Growth Over Time
-    A holistic view of the growth of Orca Whirlpools over time. 
-    
+    Since launch in March 2022, the SOL-USDC whirlpool has ranked high 
+    regardless by trading volume, fees generated for liquidity providers, or daily number of 
+    transactions. As a result, the SOL-USDC pool had always been a favorite among liquidity 
+    providers in 2022. 
     """
 )
 
@@ -59,61 +54,50 @@ st.markdown(
 
 st.markdown(f'#### Daily Number of Transactions per Whirlpool [{icons.setting_icon}](https://app.flipsidecrypto.com/velocity/queries/860f8493-6bad-45a6-98b0-d76d587dc1c3)', unsafe_allow_html=True)
 st.write(
-    '')
+    '*Number of unique transactions interacting with each Orca Whirlpool each day.*')
 st.plotly_chart(f.fig_trx_pool, use_container_width=True)
 
 st.markdown(f'#### Active Liquidity Providers per Whirlpool [{icons.setting_icon}](https://app.flipsidecrypto.com/velocity/queries/d8efa2d6-ba9c-4610-ae0b-bf2bcbe80b7c)', unsafe_allow_html=True)
 st.write(
-    """ """)
+    """*Number of unique liquidity providers who increased or decreased liquidity from each Orca Whirlpool each day.*""")
 st.plotly_chart(f.fig_lp_num_pool, use_container_width=True)
 
 
 st.markdown(f'#### Total Trading Volume (USD) [{icons.setting_icon}](https://app.flipsidecrypto.com/velocity/queries/860f8493-6bad-45a6-98b0-d76d587dc1c3)', unsafe_allow_html=True)
 st.write(
-    """ """)
+    """*Total volume for swaps for each pool per day.* """)
 st.plotly_chart(f.fig_swap_vol_pool, use_container_width=True)
 
 
 st.markdown(f'#### Daily Fee Earned by Liquidity Providers (USD) [{icons.setting_icon}](https://app.flipsidecrypto.com/velocity/queries/860f8493-6bad-45a6-98b0-d76d587dc1c3)', unsafe_allow_html=True)
 st.write(
-    """ """)
+    """*Total fees earned by liquidity providers for each pool per day. Only 97% of the fees counted as 
+    3% goes to the Foundation.* """)
 st.plotly_chart(f.fig_swap_fee_pool, use_container_width=True)
 
-
-
-
-
-st.markdown(
-    """
-    As of January 11th, 2023, ... 
-
-    """
-)
 
 st.markdown(
     """
     ---
     # Impact of $BONK on Orca Whirlpools
-    On January 3rd 2023, a token 
-    
-    
-
+    On January 3rd 2023, $BONK was launched, which changed the landscapes on Orca whirlpools.
     """
 )
 
-st.markdown(f'#### Total Volume (USD) [{icons.setting_icon}](https://app.flipsidecrypto.com/velocity/queries/860f8493-6bad-45a6-98b0-d76d587dc1c3)', unsafe_allow_html=True)
+st.markdown(f'#### Total Trading Volume (USD) [{icons.setting_icon}](https://app.flipsidecrypto.com/velocity/queries/860f8493-6bad-45a6-98b0-d76d587dc1c3)', unsafe_allow_html=True)
 st.write(
-    """ """)
+    """*Total volume for swaps for each pool per day.*  """)
 st.plotly_chart(f.fig_swap_vol_pool_bonk, use_container_width=True)
 
-st.markdown(f'#### Total Volume (USD) [{icons.setting_icon}](https://app.flipsidecrypto.com/velocity/queries/860f8493-6bad-45a6-98b0-d76d587dc1c3)', unsafe_allow_html=True)
+st.markdown(f'#### Daily Active Liquidity Providers (USD) [{icons.setting_icon}](https://app.flipsidecrypto.com/velocity/queries/860f8493-6bad-45a6-98b0-d76d587dc1c3)', unsafe_allow_html=True)
 st.write(
-    """ """)
+    """*Number of unique liquidity providers who increased or decreased liquidity from each Orca Whirlpool each day.*""")
 st.plotly_chart(f.fig_lp_pool_bonk, use_container_width=True)
 
-st.markdown(f'#### Total Volume (USD) [{icons.setting_icon}](https://app.flipsidecrypto.com/velocity/queries/860f8493-6bad-45a6-98b0-d76d587dc1c3)', unsafe_allow_html=True)
+st.markdown(f'#### Total Fees Earned by Liquidity Providers (USD) [{icons.setting_icon}](https://app.flipsidecrypto.com/velocity/queries/860f8493-6bad-45a6-98b0-d76d587dc1c3)', unsafe_allow_html=True)
 st.write(
-    """ """)
+    """ *Total fees earned by liquidity providers for each pool per day. Only 97% of the fees counted as 
+    3% goes to the Foundation.*""")
 st.plotly_chart(f.fig_swap_fee_pool_bonk, use_container_width=True)
 
 
@@ -124,7 +108,8 @@ st.markdown(
     ---
     # Capital Efficiency: Orca vs. Uniswap
     
-    On January 3rd 2023, a token 
+    With concentrated liquidity, liquidity providers on Orca Whirlpools rebalance their positions much more frequently 
+    compared to liquidity providers on Uniswap. 
 
 
 
@@ -133,28 +118,19 @@ st.markdown(
 
 
 st.markdown(
-    f'####  [{icons.setting_icon}](https://app.flipsidecrypto.com/velocity/queries/d8efa2d6-ba9c-4610-ae0b-bf2bcbe80b7c)', unsafe_allow_html=True
-)
-st.write("""*The monthly inflow volume of assets bridged from Ehereum to Optimism.*""")
-st.plotly_chart(f.fig_lp_num_pool, use_container_width=True)
-
-st.markdown(
     f'#### Daily LP Position Adjustment on Orca [{icons.setting_icon}](https://app.flipsidecrypto.com/velocity/queries/2ec0ad61-7b05-4a13-82a0-423d39dc0e6f)', unsafe_allow_html=True
 )
-st.write("""*The monthly inflow volume of assets bridged from Ehereum to Optimism.*""")
+st.write("""*The average daily number of price range adjustments a liquidity provider performs. Estimated by 
+counting the pairs of decreasing liquidity transaction with increasing liquidity transaction in the same whirlpool each day.*""")
 st.plotly_chart(f.fig_lp_adj_orca, use_container_width=True)
 
 st.markdown(
     f'####  Daily LP Position Adjustment on Uniswap [{icons.setting_icon}](https://app.flipsidecrypto.com/velocity/queries/65d08749-498e-4406-aa54-62ab91b210b5)', unsafe_allow_html=True
 )
-st.write("""*The monthly inflow volume of assets bridged from Ehereum to Optimism.*""")
+st.write("""*The average daily number of price range adjustments a liquidity provider performs. Estimated by 
+counting the pairs of decreasing liquidity transaction with increasing liquidity transaction in the same whirlpool each day.*""")
 st.plotly_chart(f.fig_lp_adj_uni, use_container_width=True)
 
-
-
-st.markdown(
-    f'#### Title [{icons.setting_icon}](https://twitter.com/phi_deltalytics)', unsafe_allow_html=True
-)
 
 st.markdown(
     """
@@ -169,15 +145,14 @@ st.markdown(
     """
     next to chart and table tiles.
     
-    For page source, see [Github](https://github.com/pd123459/OptimismDashboard).
+    For page source, see [Github](https://github.com/pd123459/Orca-Whirlpools).
     
     ---
     # About
 
-    This dashboard is designed by [@Phi_Deltalytics](https://twitter.com/phi_deltalytics)
-     for MetricsDao's 
-    Optimism Mega Dashboard bounty. I hope it serves as a valuable tool for 
-    both newcomers and experienced users to gain insights into the Optimism ecosystem. 
+    This dashboard is designed by [@Phi_Deltalytics](https://twitter.com/phi_deltalytics). 
+    I hope it serves as a valuable tool for both newcomers and experienced users 
+    to gain insights into the Orca Whirlpools. 
     
     
     Any comments and suggestions are welcomed. 
